@@ -56,7 +56,8 @@ public class SamplePresenter implements Presenters<SampleView> {
 
             @Override
             public void onNext(SampleResponse sampleResponse) {
-
+                if(sampleResponse.getStatus())
+                mSampleView.doSomething(sampleResponse);
             }
         });
     }

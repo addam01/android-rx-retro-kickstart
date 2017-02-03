@@ -3,10 +3,12 @@ package com.example.addam.skeleton_app.sample.mvp.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.addam.skeleton_app.AppPreferences;
 import com.example.addam.skeleton_app.R;
 import com.example.addam.skeleton_app.core.Rest.RestRepository;
+import com.example.addam.skeleton_app.sample.mvp.model.SampleResponse;
 import com.example.addam.skeleton_app.sample.mvp.presenter.SamplePresenter;
 import com.example.addam.skeleton_app.sample.mvp.retroRest.GetSample;
 import com.example.addam.skeleton_app.sample.mvp.view.SampleView;
@@ -46,5 +48,10 @@ public class SampleActivity extends AppCompatActivity implements SampleView {
          * logics can be handled there
          */
         mSamplePresenter.attachView(this);
+    }
+
+    @Override
+    public void doSomething(SampleResponse sampleResponse) {
+        Toast.makeText(getBaseContext(),sampleResponse.getToken(),Toast.LENGTH_SHORT).show();
     }
 }
