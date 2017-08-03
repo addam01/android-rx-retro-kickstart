@@ -5,7 +5,6 @@ import com.example.addam.skeleton_app.sample.mvp.model.SampleRequest;
 import com.example.addam.skeleton_app.sample.mvp.model.SampleResponse;
 
 import retrofit2.http.Body;
-import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;

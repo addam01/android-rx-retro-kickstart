@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.addam.skeleton_app.SampleGithub.Activity.GitUserActivity">
+    tools:context="com.example.addam.skeleton_app.SampleGithub.Activity.GitUserActivity"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+    <TextView
+        android:id="@+id/tResponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -13,7 +13,7 @@ import com.example.addam.skeleton_app.sample.mvp.presenter.SamplePresenter;
 import com.example.addam.skeleton_app.sample.mvp.retroRest.GetSample;
 import com.example.addam.skeleton_app.sample.mvp.view.SampleView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SampleActivity extends AppCompatActivity implements SampleView {
@@ -21,7 +21,7 @@ public class SampleActivity extends AppCompatActivity implements SampleView {
     SamplePresenter mSamplePresenter;
     GetSample mGetSample;
 
-    @Bind(R.id.t_hello)
+    @BindView(R.id.t_hello)
     TextView tHello;
 
     @Override

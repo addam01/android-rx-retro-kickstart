@@ -1,6 +1,7 @@
 package com.example.addam.skeleton_app.SampleGithub.Presenter;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.example.addam.skeleton_app.SampleGithub.Models.GitUserResponse;
 import com.example.addam.skeleton_app.SampleGithub.RetroRest.GitUserREST;
@@ -50,12 +51,12 @@ public class GitUserPresenter implements Presenters<GitUserView> {
 
             @Override
             public void onError(Throwable e) {
-
+                Log.e("Error",e.getMessage());
             }
 
             @Override
             public void onNext(GitUserResponse gitUserResponse) {
-
+                gitUserView.displayResponse(gitUserResponse);
             }
         });
     }

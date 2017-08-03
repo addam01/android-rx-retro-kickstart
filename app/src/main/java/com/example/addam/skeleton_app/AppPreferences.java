@@ -19,6 +19,6 @@ public class AppPreferences extends Application {
         /**
          * Base URL for APIs here
          */
-        return "SOme URL";
+        return "https://api.github.com/";
     }
 }
