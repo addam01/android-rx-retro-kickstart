@@ -1,5 +1,6 @@
 package com.example.addam.skeleton_app.core.Rest;
 
+import com.example.addam.skeleton_app.SampleGithub.Models.GitUserResponse;
 import com.example.addam.skeleton_app.sample.mvp.model.SampleResponse;
 
 import javax.net.ssl.SSLSocketFactory;
@@ -25,4 +26,5 @@ public interface APIs {
      */
     Observable<SampleResponse> getSampleResponse(String username, String password);
 
+    Observable<GitUserResponse> getGithubUser(String username);
 }

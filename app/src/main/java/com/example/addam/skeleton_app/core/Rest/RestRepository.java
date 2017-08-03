@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.example.addam.skeleton_app.AppPreferences;
+import com.example.addam.skeleton_app.SampleGithub.Models.GitUserResponse;
 import com.example.addam.skeleton_app.sample.mvp.model.SampleRequest;
 import com.example.addam.skeleton_app.sample.mvp.model.SampleResponse;
 import com.google.gson.Gson;
@@ -154,6 +155,11 @@ public class RestRepository implements APIs {
     @Override
     public Observable<SampleResponse> getSampleResponse(String username, String password) {
         return mRestServices.ResquestSample(new SampleRequest(username,password));
+    }
+
+    @Override
+    public Observable<GitUserResponse> getGithubUser(String username) {
+        return mRestServices.RequestUserGitub(username);
     }
 
 }
