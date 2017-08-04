@@ -39,13 +39,12 @@ public class GitUserActivity extends AppCompatActivity implements GitUserView {
     }
 
     private void initializePresenter() {
-        presenter = new GitUserPresenter(new GitUserREST(new RestRepository(this,"Some token")));
+        presenter = new GitUserPresenter(new GitUserREST(new RestRepository(this,"81e68cdf13d6fa17432f28a867c189a33061ccc5")));
         presenter.attachView(this);
     }
 
     @OnClick(R.id.Submit)
     void OnClickSubmit(){
-        Toast.makeText(this, "HEllo", Toast.LENGTH_LONG).show();
         presenter.getGitUserDetails(tUsername.getText().toString());
     }
 

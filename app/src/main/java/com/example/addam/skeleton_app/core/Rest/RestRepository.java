@@ -1,5 +1,6 @@
 package com.example.addam.skeleton_app.core.Rest;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 
@@ -31,6 +32,7 @@ import rx.Observable;
  * Created by Addam on 1/31/17.
  */
 
+@SuppressWarnings({"DefaultFileTemplate", "WeakerAccess", "DanglingJavadoc", "JavaDoc"})
 public class RestRepository implements APIs {
     private Retrofit mRetrofit;
     private String Token;
@@ -73,7 +75,7 @@ public class RestRepository implements APIs {
 
                     // Add JWT Token to the header if not empty
                     if (!authorizationTokenIsEmpty()) {
-                        requestBuilder.addHeader("Authorization", "Bearer " + Token);
+                        requestBuilder.addHeader("Authorization", "Token " + Token);
                     }
 
                     Request request = requestBuilder.build();
@@ -119,10 +121,12 @@ public class RestRepository implements APIs {
         // Create a trust manager that does not validate certificate chains
         final TrustManager[] trustAllCerts = new TrustManager[] {
                 new X509TrustManager() {
+                    @SuppressLint("TrustAllX509TrustManager")
                     @Override
                     public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
                     }
 
+                    @SuppressLint("TrustAllX509TrustManager")
                     @Override
                     public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
                     }

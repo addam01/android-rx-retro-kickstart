@@ -14,6 +14,7 @@ import rx.Subscriber;
  * Created by addam on 8/3/17.
  */
 
+@SuppressWarnings({"DefaultFileTemplate", "WeakerAccess"})
 public class GitUserPresenter implements Presenters<GitUserView> {
     GitUserView gitUserView;
     GitUserREST gitUserREST;
@@ -43,6 +44,7 @@ public class GitUserPresenter implements Presenters<GitUserView> {
     }
 
     public void getGitUserDetails(String username){
+        gitUserREST.setUsername(username);
         gitUserREST.execute(new Subscriber<GitUserResponse>() {
             @Override
             public void onCompleted() {

@@ -6,6 +6,7 @@ import com.example.addam.skeleton_app.sample.mvp.model.SampleResponse;
 
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import rx.Observable;
@@ -14,6 +15,7 @@ import rx.Observable;
  * Created by Addam on 2/1/17.
  */
 
+@SuppressWarnings("DefaultFileTemplate")
 public interface RestServices {
     @POST("some request end")
     Observable<SampleResponse> ResquestSample(@Body SampleRequest sampleRequest);
